@@ -1,4 +1,4 @@
-# Secure File Transfer Terminal Application
+# Linux Based Secure File-Transfering-System-vOS1
 ## Overview
 This project implements a secure file transfer system consisting of a C++ server and a Python client. The application allows authenticated clients to send files to the server, with a focus on demonstrating various operating system concepts and basic security mechanisms. Communication between the client and server is secured using a PIN-based authentication system, followed by the exchange of a session key used to encrypt file data via XOR encryption. The integrity of transferred files is verified using checksums.
 
