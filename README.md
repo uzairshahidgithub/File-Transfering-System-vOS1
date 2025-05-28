@@ -60,13 +60,13 @@ The system follows a client-server architecture:
 ## Build Instructions
 ### C++ Server
 
-1.  Navigate to the `cpp_server` directory:
+1.  Navigate to the `cpp_receiver` directory:
     ```bash
-    cd cpp_server
+    cd cpp_receiver
     ```
 2.  Compile the server code. For example, using g++:
     ```bash
-    g++ main.cpp security_ops.cpp -o server -std=c++17 -pthread
+   make
     ```
     *(The `-pthread` flag is good practice if you extend threading further, though `fork` is the primary concurrency model here for client handling)*
 
@@ -94,16 +94,16 @@ For the system to function correctly, certain security parameters **must be iden
 
 ## Running the Application
 1.  **Start the C++ Server**:
-    * Navigate to the `cpp_server` directory.
+    * Navigate to the `cpp_receiver` directory.
     * Run the compiled server executable:
         ```bash
-        ./server
+        ./cpp_server
         ```
     * The server will log that it's listening on the configured port.
 
 2.  **Run the Python Client**:
     * Open a new terminal.
-    * Navigate to the `python_client` directory.
+    * Navigate to the `python_sender` directory.
     * Run the client script with the required PIN and file path(s) as command-line arguments:
         ```bash
         python client.py <PIN> <file1_path> [file2_path] ...
