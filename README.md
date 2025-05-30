@@ -64,9 +64,9 @@ The system follows a client-server architecture:
     ```bash
     cd cpp_receiver
     ```
-2.  Compile the server code. For example, using g++:
+2.  Compile the server code:
     ```bash
-   make
+    make
     ```
     *(The `-pthread` flag is good practice if you extend threading further, though `fork` is the primary concurrency model here for client handling)*
 
